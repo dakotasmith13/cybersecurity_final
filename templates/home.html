@@ -1,0 +1,16 @@
+{% extends "layout-logout.html" %}
+{% block content %}
+<div class="container">
+    <div id="lesson-choices" class="card">
+        <div class="card-body">
+            <h5><em>Welcome to the Safe - Please select a Menu Item</em></h5>
+            <ul>
+                {% for lesson in show %}
+                <li>{{ lesson }}: <a href="{{ url_for( show[lesson][0]) }}">{{ show[lesson][1]}} </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

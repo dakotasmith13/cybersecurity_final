@@ -1,0 +1,96 @@
+#masthead {
+    background-color: #36454F;
+    padding: 20px;
+    border-bottom: #FFFFFF 1px solid;
+    width: 100%;
+}
+
+#masthead img {
+    margin-right: 1em;
+}
+
+#masthead h1 {
+    display: inline-block;
+    color: white;
+}
+
+
+.tagline {
+    display: inline-block;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+
+div.container {
+    display: grid;
+    grid-template-areas: "nothing login nothing2";
+    grid-auto-columns: 30% 40% 30%;
+    max-width: 80%;
+    margin-bottom: 3em;
+}
+
+div.card {
+    grid-area: login;
+    min-width: 100%;
+    margin-bottom: 5em;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: "one two three";
+    grid-auto-columns: 30% 40% 30%;
+    justify-items: center;
+}
+
+.header-text {
+    margin-bottom: 1em;
+    grid-area: two;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3%;
+    background: #151818;
+    color: #FFFFFF;
+}
+
+#content{
+    padding: 1.5em 3em;
+}
+
+.uvm-green {
+    background-color: #36454F;
+    color: white;
+}
+
+#lesson-choices {
+    margin-bottom: 15rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-areas: "logo text logout";
+    grid-auto-columns: 25% 65% 10%;
+}
+
+.header-image {
+    grid-area: logo;
+}
+
+.header-title {
+    grid-area: text;
+    margin: 1em;
+
+}
+
+.logout {
+    grid-area: logout;
+    margin-bottom: 0.5rem;
+    align-self: end;
+    color: #FFFFFF;
+    font-size: large;
+    text-decoration: underline;
+}

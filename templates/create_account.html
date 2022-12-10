@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row mt-3">
+                <div class="col md-6">
+                    <form action="{{ url_for('.create_account') }}" method="POST"
+                          id="new_user_form">
+                        <div class="form-group">
+                            <label for="username">Choose a Username:</label><input
+                                class="form-control" type="text" id="username"
+                                name="username" required><br/>
+                            <label for="password">Create a Password:</label><input
+                                class="form-control" type='password' id="password"
+                                name="password" required>
+                            <button type="submit" class="btn btn-primary mt-4">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                    <div style="display: inline-block;
+                                margin-bottom: 1em">
+                        <a href="#" onclick="display_pw()">
+                            Generate Random Password
+                        </a>
+                    </div>
+                    <div id="hidden-pw" style="display: none">{{ password }}</div>
+                    <script>
+                        function display_pw() {
+                            let pw = document.getElementById('hidden-pw');
+
+                            if (pw.style.display === 'none') {
+                                pw.style.display = 'inline-block';
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
